@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>my七色卡</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/colors.css">
+</head>
+<body>
+	<div id="context"></div>
+
+		<script type="text/javascript">
+			var list = ['red', 'orange', 'yellow', 'green', 'blue', 'purple','black'];
+			var context =document.getElementById("context");
+			for(var i = 0; i < list.length; i++){
+				var ul = document.createElement('ul');
+				ul.className = 'swatched '+list[i];
+				for(var j = 0; j < 20; j++){
+					var li = document.createElement('li');
+					ul.appendChild(li);
+				}
+				context.appendChild(ul);
+			}
+			
+		</script>
+</body>
+</html>

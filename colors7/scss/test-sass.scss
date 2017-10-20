@@ -1,0 +1,37 @@
+//this is just test;
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+.div{
+	background-color: red;
+}
+.box {
+  font: {
+   size: 12px;
+   weight: bold;
+  }  
+}
+@for $i from 1 to 3{
+	.box-#{$i}{width :2em*$i}
+}
+@for $i from 2 through 3{
+	.box-#{$i}{width: 2em *$i}
+}
+@for $i from 2 to 5{
+	.klass#{$i}{
+		background-color: #111111*$i
+	}
+}
+$type: 4;
+$type-width: 10px;
+
+@while $type>0{
+	.while-#{$type}{
+		width: $type-width + $type;
+	}
+	$type: $type - 1 ;
+}

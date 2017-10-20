@@ -1,0 +1,12 @@
+ul{
+	display: flex;
+	justify-content: center;
+}
+li{
+	width: 4%;
+	height: 40px;
+	list-style: none;
+}
+div{
+	border: 1px solid black;
+}
