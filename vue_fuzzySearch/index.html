@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,
+ 	maximum-scale=1.0, user-scalable=0">
+        <title>fuzzy searh</title>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            myBaidu
+            <input type="text" v-model="key">
+            <button v-on:click="query">on:click</button>
+			<h4>使用computed方法</h4>
+            <ul  v-if="choose">
+            	<li v-for="data in dataShow">{{data}}</li>
+            </ul>
+
+            <hr>
+			myBaidu2<input type="text" v-model="key2">
+			<h4>使用watch方法</h4>
+            <ul>
+            	<li v-for="data in dataShow2">{{data}}</li>
+            </ul>
+
+<!--        <p>Computed reversed message: "{{ reversedMessage }}"</p>
+            <ul>
+            	<li v-for="data in datas">{{data}}</li>
+            </ul> -->
+        </div>
+    </body>
+    <script type="text/javascript" src=source.js></script>
+    <script>
+
+        new Vue({
+            el: '#app',
+            data: exampleData,
+            methods:exampleMethod,
+            computed:exampleComputed,
+		    watch:exampleWatch,
+        })
+    </script>
+</html>
